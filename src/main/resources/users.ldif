@@ -1,0 +1,38 @@
+dn: ou=groups,dc=themunthedude,dc=com
+objectclass: top
+objectclass: organizationalUnit
+ou: groups
+
+dn: ou=people,dc=themunthedude,dc=com
+objectclass: top
+objectclass: organizationalUnit
+ou: people
+
+dn: uid=somedude,ou=people,dc=themunthedude,dc=com
+objectclass: top
+objectclass: person
+cn: Some Dude
+sn: Dude
+uid: somedude
+userPassword: aPassword
+
+dn: uid=somemun,ou=people,dc=themunthedude,dc=com
+objectclass: top
+objectclass: person
+cn: Some Mun
+sn: Mun
+uid: somemun
+userPassword: anotherPassword
+
+dn: cn=admin,ou=groups,dc=themunthedude,dc=com
+objectclass: top
+objectclass: groupOfNames
+cn: admin
+member: uid=somedude,ou=people,dc=themunthedude,dc=com
+
+dn: cn=user,ou=groups,dc=themunthedude,dc=com
+objectclass: top
+objectclass: groupOfNames
+cn: user
+member: uid=somemun,ou=people,dc=themunthedude,dc=com
+member: uid=somedude,ou=people,dc=themunthedude,dc=com
