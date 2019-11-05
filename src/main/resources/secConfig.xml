@@ -11,6 +11,7 @@
         <intercept-url pattern="/home" access="permitAll"/>
         <intercept-url pattern="/login" access="permitAll"/>
         <intercept-url pattern="/viewReports" access="permitAll"/>
+        <intercept-url pattern="/getChart" access="permitAll"/>
 
         <form-login login-page='/login' default-target-url="/" authentication-failure-url="/login?error" />
         <logout logout-success-url="/" />

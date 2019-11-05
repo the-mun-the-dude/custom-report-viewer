@@ -20,25 +20,26 @@
         </div>
         <div class="content">
             <h2>Reports</h2>
-                <div th:each="project: ${projects}">
-                    <h3>
-                        <span th:text="${project.key}"></span>
-                    </h3>
-                    <table>
-                        <tr>
-                            <th>Report Date</th>
-                            <th>High CVSS</th>
-                            <th>Medium CVSS</th>
-                            <th>Low CVSS</th>
-                        </tr>
-                        <tr class="cvssTable" th:each="report: ${project.value}">
-                            <td th:text="${report.getProjectInfo().getReportDate()}" />
-                            <td th:text="${report.getNumHigh()}" />
-                            <td th:text="${report.getNumMedium()}" />
-                            <td th:text="${report.getNumLow()}" />
-                        </tr>
-                    </table>
-                </div>
+            <div th:each="project: ${projects}">
+                <h3>
+                    <span th:text="${project.key}"></span>
+                </h3>
+                <table>
+                    <tr>
+                        <th>Report Date</th>
+                        <th>High CVSS</th>
+                        <th>Medium CVSS</th>
+                        <th>Low CVSS</th>
+                    </tr>
+                    <tr class="cvssTable" th:each="report: ${project.value}">
+                        <td th:text="${report.getProjectInfo().getReportDate()}" />
+                        <td th:text="${report.getNumHigh()}" />
+                        <td th:text="${report.getNumMedium()}" />
+                        <td th:text="${report.getNumLow()}" />
+                    </tr>
+                </table>
+                <a class="btn btn-primary" th:href="@{/getChart/{gav}(gav=${project.key})}">Chart</a>
+            </div>
         </div>
     </div>
 </body>
