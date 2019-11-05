@@ -29,6 +29,7 @@ public class MainController {
         return "home";
     }
 
+    // TODO: put in a button on each project listing, which pops up a modal window with a graph showing CVEs over time
     @RequestMapping("/viewReports")
     public String viewReports(Model model, Principal principal) throws IOException {
         Map<String, List<ReportJson>> sortedReports = new HashMap<>();

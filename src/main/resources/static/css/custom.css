@@ -10,6 +10,17 @@ td, th {
   padding: 8px;
 }
 
-tr:nth-child(even) {
-  background-color: #dddddd;
+tr.cvssTable > td:nth-child(2) {
+    background-color: rgb(200,55,55);
+    color: black;
+}
+
+tr.cvssTable > td:nth-child(3) {
+    background-color: rgb(245,189,73);
+    color: black;
+}
+
+tr.cvssTable > td:nth-child(4) {
+    background-color: rgb(86,168,36);
+    color: black;
 }

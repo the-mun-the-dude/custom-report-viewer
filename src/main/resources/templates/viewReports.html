@@ -31,7 +31,7 @@
                             <th>Medium CVSS</th>
                             <th>Low CVSS</th>
                         </tr>
-                        <tr th:each="report: ${project.value}">
+                        <tr class="cvssTable" th:each="report: ${project.value}">
                             <td th:text="${report.getProjectInfo().getReportDate()}" />
                             <td th:text="${report.getNumHigh()}" />
                             <td th:text="${report.getNumMedium()}" />
